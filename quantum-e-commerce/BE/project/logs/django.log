@@ -1,0 +1,35 @@
+INFO 2025-06-15 22:37:12,643 autoreload 9560 10560 Watching for file changes with StatReloader
+INFO 2025-06-15 22:38:30,362 autoreload 9560 10560 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-15 22:38:31,051 autoreload 36400 7012 Watching for file changes with StatReloader
+INFO 2025-06-15 22:38:45,190 autoreload 36400 7012 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-15 22:38:46,070 autoreload 26368 13688 Watching for file changes with StatReloader
+INFO 2025-06-15 22:39:20,897 autoreload 26368 13688 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-15 22:39:21,653 autoreload 12652 21532 Watching for file changes with StatReloader
+INFO 2025-06-15 22:39:26,707 autoreload 12652 21532 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-15 22:39:27,469 autoreload 8676 22268 Watching for file changes with StatReloader
+INFO 2025-06-15 22:39:32,544 autoreload 8676 22268 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-15 22:39:33,363 autoreload 27516 10328 Watching for file changes with StatReloader
+INFO 2025-06-15 22:39:38,413 autoreload 27516 10328 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-15 22:39:39,287 autoreload 10476 26164 Watching for file changes with StatReloader
+INFO 2025-06-15 22:40:08,047 autoreload 10476 26164 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-15 22:40:08,929 autoreload 14488 12216 Watching for file changes with StatReloader
+INFO 2025-06-15 22:40:48,855 autoreload 14488 12216 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\urls.py changed, reloading.
+INFO 2025-06-15 22:40:49,647 autoreload 31976 13800 Watching for file changes with StatReloader
+INFO 2025-06-15 22:46:40,322 autoreload 31976 13800 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-15 22:46:41,369 autoreload 13848 26756 Watching for file changes with StatReloader
+INFO 2025-06-15 22:46:50,938 autoreload 13848 26756 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-15 22:46:51,655 autoreload 26316 6064 Watching for file changes with StatReloader
+INFO 2025-06-15 22:46:56,527 autoreload 26316 6064 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-15 22:46:57,220 autoreload 28536 12252 Watching for file changes with StatReloader
+INFO 2025-06-15 22:47:00,999 autoreload 28536 12252 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-15 22:47:01,679 autoreload 24232 25920 Watching for file changes with StatReloader
+INFO 2025-06-16 17:14:15,642 autoreload 18580 38764 Watching for file changes with StatReloader
+INFO 2025-06-16 17:14:29,383 autoreload 18580 38764 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-16 17:14:30,157 autoreload 32184 35124 Watching for file changes with StatReloader
+INFO 2025-06-16 17:14:35,149 autoreload 32184 35124 D:\BaitapUIT\Mat_Ma_Hoc\New_final_Project\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-16 17:14:35,904 autoreload 18144 39072 Watching for file changes with StatReloader
+INFO 2025-06-16 17:15:08,217 autoreload 31140 16196 Watching for file changes with StatReloader
+WARNING 2025-06-16 17:15:11,461 log 31140 23956 Not Found: /
+WARNING 2025-06-16 17:15:11,462 basehttp 31140 23956 "GET / HTTP/1.1" 404 3023
+WARNING 2025-06-16 17:15:43,769 log 31140 24696 Not Found: /
+WARNING 2025-06-16 17:15:43,769 basehttp 31140 24696 "GET / HTTP/1.1" 404 3023

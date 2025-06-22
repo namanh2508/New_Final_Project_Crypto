@@ -1,0 +1,19 @@
+django
+psycopg2-binary
+python-decouple
+dj-database-url
+supabase
+djangorestframework
+django-cors-headers
+pillow
+django-filter
+python-decouple
+PyJWT
+pydantic
+sqlparse
+tzdata
+
+# Dilithium dependencies
+pycryptodome
+cryptography
+numpy

@@ -1,0 +1,8 @@
+# dependencies for the frontend application
+axios react-router-dom @reduxjs/toolkit react-redux
+@tailwindcss/forms @heroicons/react
+react-hook-form @hookform/resolvers yup
+react-hot-toast react-loading-skeleton
+js-cookie jwt-decode
+
+# development dependencies
