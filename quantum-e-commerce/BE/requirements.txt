@@ -17,3 +17,5 @@ tzdata
 pycryptodome
 cryptography
 numpy
+
+argon2-cffi

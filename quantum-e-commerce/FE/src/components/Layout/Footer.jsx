@@ -36,20 +36,21 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-gray-800 mb-4">THANH TOÁN</h3>
             <div className="grid grid-cols-3 gap-2 mb-4">
-              <img src="/images/payment/visa.png" alt="Visa" className="h-8 bg-white border rounded" />
+              {/* <img src="/images/payment/visa.png" alt="Visa" className="h-8 bg-white border rounded" />
               <img src="/images/payment/mastercard.png" alt="Mastercard" className="h-8 bg-white border rounded" />
               <img src="/images/payment/vnpay.png" alt="VNPay" className="h-8 bg-white border rounded" />
               <img src="/images/payment/shopeepay.png" alt="ShopeePay" className="h-8 bg-white border rounded" />
               <img src="/images/payment/momo.png" alt="MoMo" className="h-8 bg-white border rounded" />
-              <img src="/images/payment/zalopay.png" alt="ZaloPay" className="h-8 bg-white border rounded" />
+              <img src="/images/payment/zalopay.png" alt="ZaloPay" className="h-8 bg-white border rounded" /> */}
+              
             </div>
             
             <h3 className="font-semibold text-gray-800 mb-4">ĐƠN VỊ VẬN CHUYỂN</h3>
             <div className="grid grid-cols-3 gap-2">
-              <img src="/images/shipping/ghn.png" alt="GHN" className="h-8 bg-white border rounded" />
+              {/* <img src="/images/shipping/ghn.png" alt="GHN" className="h-8 bg-white border rounded" />
               <img src="/images/shipping/ghtk.png" alt="GHTK" className="h-8 bg-white border rounded" />
               <img src="/images/shipping/viettel.png" alt="Viettel Post" className="h-8 bg-white border rounded" />
-              <img src="/images/shipping/shopee-express.png" alt="Shopee Express" className="h-8 bg-white border rounded" />
+              <img src="/images/shipping/shopee-express.png" alt="Shopee Express" className="h-8 bg-white border rounded" /> */}
             </div>
           </div>
 
@@ -65,10 +66,10 @@ const Footer = () => {
 
             <h3 className="font-semibold text-gray-800 mb-4">TẢI ỨNG DỤNG SHOPEE NGAY THÔI</h3>
             <div className="flex space-x-2">
-              <img src="/images/qr-code.png" alt="QR Code" className="w-16 h-16" />
+              {/* <img src="/images/qr-code.png" alt="QR Code" className="w-16 h-16" /> */}
               <div className="flex flex-col space-y-1">
-                <img src="/images/app-store.png" alt="App Store" className="h-8" />
-                <img src="/images/google-play.png" alt="Google Play" className="h-8" />
+                {/* <img src="/images/app-store.png" alt="App Store" className="h-8" />
+                <img src="/images/google-play.png" alt="Google Play" className="h-8" /> */}
               </div>
             </div>
           </div>

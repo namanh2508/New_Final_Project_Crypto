@@ -61,6 +61,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware', 
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -97,7 +98,7 @@ DATABASES = {
     'default': dj_database_url.parse(
         config('DATABASE_URL'),
         conn_max_age=600,
-        conn_health_checks=True,
+        #conn_health_checks=True,
     ) if config('DATABASE_URL', default=None) else {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
@@ -281,3 +282,8 @@ LOGGING = {
         },
     },
 }
+
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.Argon2PasswordHasher',  # nâng cấp hàm băm mật khẩu +1
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+]
