@@ -8227,3 +8227,167 @@ INFO 2025-06-25 18:26:55,683 basehttp 27516 10940 "GET /api/buyers/addresses/ HT
 INFO 2025-06-25 18:26:55,865 basehttp 27516 7828 "GET /api/buyers/profile/ HTTP/1.1" 200 3005
 INFO 2025-06-25 18:27:02,842 basehttp 27516 1908 "OPTIONS /api/buyers/37f810ca-7e45-4bd5-a882-2bb8f5c88e00/create-digital-signature/ HTTP/1.1" 200 0
 INFO 2025-06-25 18:27:03,307 basehttp 27516 1908 "POST /api/buyers/37f810ca-7e45-4bd5-a882-2bb8f5c88e00/create-digital-signature/ HTTP/1.1" 200 2785
+INFO 2025-06-25 19:18:37,635 autoreload 24336 14388 Watching for file changes with StatReloader
+INFO 2025-06-25 19:21:44,365 basehttp 24336 26864 "OPTIONS /api/products/featured/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:21:44,380 basehttp 24336 20468 "OPTIONS /api/products/trending/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:21:44,382 basehttp 24336 27208 "OPTIONS /api/products/categories/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:21:44,394 basehttp 24336 15380 "OPTIONS /api/products/featured/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:21:44,394 basehttp 24336 7420 "OPTIONS /api/products/trending/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:21:44,395 basehttp 24336 25056 "OPTIONS /api/products/categories/ HTTP/1.1" 200 0
+WARNING 2025-06-25 19:21:44,501 log 24336 20468 Unauthorized: /api/products/featured/
+WARNING 2025-06-25 19:21:44,502 log 24336 26864 Unauthorized: /api/products/categories/
+WARNING 2025-06-25 19:21:44,502 log 24336 27208 Unauthorized: /api/products/trending/
+WARNING 2025-06-25 19:21:44,503 basehttp 24336 20468 "GET /api/products/featured/ HTTP/1.1" 401 172
+WARNING 2025-06-25 19:21:44,503 basehttp 24336 26864 "GET /api/products/categories/ HTTP/1.1" 401 172
+WARNING 2025-06-25 19:21:44,504 basehttp 24336 27208 "GET /api/products/trending/ HTTP/1.1" 401 172
+WARNING 2025-06-25 19:21:44,507 log 24336 20468 Unauthorized: /api/products/featured/
+WARNING 2025-06-25 19:21:44,509 log 24336 26864 Unauthorized: /api/products/categories/
+WARNING 2025-06-25 19:21:44,511 log 24336 27208 Unauthorized: /api/products/trending/
+INFO 2025-06-25 19:21:44,513 basehttp 24336 25056 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:21:44,513 basehttp 24336 7420 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:21:44,513 basehttp 24336 15380 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-06-25 19:21:44,514 basehttp 24336 26864 "GET /api/products/categories/ HTTP/1.1" 401 172
+WARNING 2025-06-25 19:21:44,515 basehttp 24336 20468 "GET /api/products/featured/ HTTP/1.1" 401 172
+WARNING 2025-06-25 19:21:44,515 basehttp 24336 27208 "GET /api/products/trending/ HTTP/1.1" 401 172
+WARNING 2025-06-25 19:21:44,552 log 24336 7420 Not Found: /api/token/refresh/
+WARNING 2025-06-25 19:21:44,553 log 24336 26864 Not Found: /api/token/refresh/
+WARNING 2025-06-25 19:21:44,553 log 24336 20468 Not Found: /api/token/refresh/
+WARNING 2025-06-25 19:21:44,554 log 24336 15380 Not Found: /api/token/refresh/
+WARNING 2025-06-25 19:21:44,555 log 24336 27208 Not Found: /api/token/refresh/
+WARNING 2025-06-25 19:21:44,555 basehttp 24336 26864 "POST /api/token/refresh/ HTTP/1.1" 404 3061
+WARNING 2025-06-25 19:21:44,555 basehttp 24336 7420 "POST /api/token/refresh/ HTTP/1.1" 404 3061
+WARNING 2025-06-25 19:21:44,556 basehttp 24336 20468 "POST /api/token/refresh/ HTTP/1.1" 404 3061
+WARNING 2025-06-25 19:21:44,558 log 24336 25056 Not Found: /api/token/refresh/
+WARNING 2025-06-25 19:21:44,558 basehttp 24336 15380 "POST /api/token/refresh/ HTTP/1.1" 404 3061
+WARNING 2025-06-25 19:21:44,559 basehttp 24336 27208 "POST /api/token/refresh/ HTTP/1.1" 404 3061
+WARNING 2025-06-25 19:21:44,560 basehttp 24336 25056 "POST /api/token/refresh/ HTTP/1.1" 404 3061
+INFO 2025-06-25 19:21:44,912 basehttp 24336 25056 - Broken pipe from ('127.0.0.1', 64818)
+INFO 2025-06-25 19:22:45,162 basehttp 24336 22816 "OPTIONS /api/sellers/register/ HTTP/1.1" 200 0
+ERROR 2025-06-25 19:22:45,718 log 24336 22816 Internal Server Error: /api/sellers/register/
+Traceback (most recent call last):
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\sellers\views.py", line 38, in register
+    'seller': SellerSerializer(seller).data,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 571, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 523, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\letha\AppData\Roaming\Python\Python313\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `total_products` is not valid for model `Seller` in `sellers.serializers.SellerSerializer`.
+ERROR 2025-06-25 19:22:45,722 basehttp 24336 22816 "POST /api/sellers/register/ HTTP/1.1" 500 153957
+INFO 2025-06-25 19:25:19,207 basehttp 24336 10380 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:19,208 basehttp 24336 8176 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:19,211 basehttp 24336 8164 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:19,315 basehttp 24336 8176 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:19,315 basehttp 24336 10380 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:19,349 basehttp 24336 8164 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:19,389 basehttp 24336 10380 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:19,532 basehttp 24336 26772 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:19,590 basehttp 24336 26772 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:25,501 basehttp 24336 26772 "OPTIONS /api/buyers/login/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:25,728 basehttp 24336 26772 "POST /api/buyers/login/ HTTP/1.1" 200 3778
+INFO 2025-06-25 19:25:25,837 basehttp 24336 10380 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:25,855 basehttp 24336 26772 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:25,856 basehttp 24336 8164 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:25,930 basehttp 24336 9100 "OPTIONS /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:25,931 basehttp 24336 8164 "OPTIONS /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:25,959 basehttp 24336 10380 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:25,966 basehttp 24336 8176 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:25,980 basehttp 24336 26772 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:26,014 basehttp 24336 8164 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:26,097 basehttp 24336 26772 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:26,184 basehttp 24336 8164 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:31,376 basehttp 24336 8164 "OPTIONS /api/products/?search=iPhone+15&page=1&page_size=20&ordering= HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:31,377 basehttp 24336 26772 "OPTIONS /api/products/?search=iPhone+15&page=1&page_size=20&ordering= HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:31,471 basehttp 24336 26772 "GET /api/products/?search=iPhone+15&page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:31,576 basehttp 24336 8164 "GET /api/products/?search=iPhone+15&page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:32,234 basehttp 24336 8164 "OPTIONS /api/products/?search=%C3%81o+kho%C3%A1c&page=1&page_size=20&ordering= HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:32,325 basehttp 24336 8164 "GET /api/products/?search=%C3%81o+kho%C3%A1c&page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:32,789 basehttp 24336 8164 "OPTIONS /api/products/?search=Gi%C3%A0y+th%E1%BB%83+thao&page=1&page_size=20&ordering= HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:32,882 basehttp 24336 8164 "GET /api/products/?search=Gi%C3%A0y+th%E1%BB%83+thao&page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:33,279 basehttp 24336 8164 "OPTIONS /api/products/?search=Laptop&page=1&page_size=20&ordering= HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:33,365 basehttp 24336 8164 "GET /api/products/?search=Laptop&page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:33,877 basehttp 24336 8164 "GET /api/products/?search=iPhone+15&page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:38,419 basehttp 24336 8164 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:38,489 basehttp 24336 10380 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:38,884 basehttp 24336 26772 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:38,885 basehttp 24336 8176 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:38,980 basehttp 24336 10380 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:39,011 basehttp 24336 8164 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:39,093 basehttp 24336 10380 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:39,187 basehttp 24336 8164 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:39,288 basehttp 24336 10380 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 19:25:39,783 basehttp 24336 8164 "OPTIONS /api/buyers/addresses/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:39,784 basehttp 24336 10380 "OPTIONS /api/buyers/profile/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:39,784 basehttp 24336 26772 "OPTIONS /api/buyers/profile/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:39,784 basehttp 24336 8176 "OPTIONS /api/buyers/addresses/ HTTP/1.1" 200 0
+INFO 2025-06-25 19:25:39,830 basehttp 24336 8176 "GET /api/buyers/profile/ HTTP/1.1" 200 3005
+INFO 2025-06-25 19:25:39,865 basehttp 24336 8164 "GET /api/buyers/addresses/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:25:39,870 basehttp 24336 10380 "GET /api/buyers/profile/ HTTP/1.1" 200 3005
+INFO 2025-06-25 19:25:39,940 basehttp 24336 8176 "GET /api/buyers/addresses/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:30:05,094 autoreload 24336 14388 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-25 19:30:06,225 autoreload 14396 2660 Watching for file changes with StatReloader
+INFO 2025-06-25 19:30:09,669 autoreload 14396 2660 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-25 19:30:10,349 autoreload 22896 1164 Watching for file changes with StatReloader
+INFO 2025-06-25 19:30:12,211 autoreload 22896 1164 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-25 19:30:12,769 autoreload 6020 19816 Watching for file changes with StatReloader
+INFO 2025-06-25 19:30:14,834 autoreload 6020 19816 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-25 19:30:15,502 autoreload 26540 21320 Watching for file changes with StatReloader
+INFO 2025-06-25 19:30:17,333 autoreload 26540 21320 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-25 19:30:17,992 autoreload 20020 25348 Watching for file changes with StatReloader
+INFO 2025-06-25 19:30:20,947 autoreload 20020 25348 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-25 19:30:21,600 autoreload 13392 14416 Watching for file changes with StatReloader
+INFO 2025-06-25 19:30:27,418 autoreload 13392 14416 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-25 19:30:27,983 autoreload 10872 3764 Watching for file changes with StatReloader
+INFO 2025-06-25 19:33:00,831 autoreload 10872 3764 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\signatures\views.py changed, reloading.
+INFO 2025-06-25 19:33:01,484 autoreload 2268 648 Watching for file changes with StatReloader
+INFO 2025-06-25 19:33:07,146 basehttp 2268 10672 "GET /api/buyers/profile/ HTTP/1.1" 200 3005
+INFO 2025-06-25 19:33:07,173 basehttp 2268 24148 "GET /api/buyers/addresses/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:33:07,261 basehttp 2268 10672 "GET /api/buyers/addresses/ HTTP/1.1" 200 26
+INFO 2025-06-25 19:33:07,480 basehttp 2268 2772 "GET /api/buyers/profile/ HTTP/1.1" 200 3005
+INFO 2025-06-25 19:46:52,446 autoreload 2268 648 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\project\settings.py changed, reloading.
