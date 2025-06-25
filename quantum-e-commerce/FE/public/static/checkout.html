@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán An Toàn - ShopSecure</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(90deg, #ee4d2d, #f05123);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo::before {
+            content: '🛡️';
+            margin-right: 0.5rem;
+        }
+
+        .checkout-steps {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .step.active {
+            background: rgba(255,255,255,0.3);
+            font-weight: bold;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Security Banner */
+        .security-banner {
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .security-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .security-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        /* Checkout Container */
+        .checkout-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Checkout Form */
+        .checkout-form {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .form-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            border-color: #ee4d2d;
+        }
+
+        .form-input.encrypted {
+            background: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+        }
+
+        .encryption-indicator {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #28a745;
+            font-size: 0.9rem;
+        }
+
+        /* Payment Methods */
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .payment-method {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .payment-method:hover {
+            border-color: #ee4d2d;
+            background: #fff5f5;
+        }
+
+        .payment-method.selected {
+            border-color: #ee4d2d;
+            background: #fff5f5;
+        }
+
+        .payment-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .payment-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .payment-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.3rem;
+        }
+
+        /* Credit Card Form */
+        .card-form {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .card-form.active {
+            display: block;
+        }
+
+        .card-number-group {
+            position: relative;
+        }
+
+        .card-icons {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .card-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Order Summary */
+        .order-summary {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+        }
+
+        .summary-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .order-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .item-image {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #f0f2f5, #e4e6ea);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.3rem;
+        }
+
+        .item-variant {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .item-price {
+            font-weight: bold;
+            color: #ee4d2d;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .summary-row.total {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            padding-top: 1rem;
+            border-top: 2px solid #eee;
+            margin-top: 1rem;
+        }
+
+        .total-price {
+            color: #ee4d2d;
+        }
+
+        /* Security Info Box */
+        .security-info {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .security-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .security-feature {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* Place Order Button */
+        .place-order-btn {
+            width: 100%;
+            background: linear-gradient(90deg, #ee4d2d, #f05123);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .place-order-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(238, 77, 45, 0.3);
+        }
+
+        .place-order-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Digital Signature Modal */
+        .signature-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .signature-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .signature-canvas {
+            border: 2px dashed #ddd;
+            border-radius: 10px;
+            margin: 1rem 0;
+            cursor: crosshair;
+        }
+
+        .signature-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #ee4d2d;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .loading-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .loading-steps {
+            margin: 2rem 0;
+        }
+
+        .loading-step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            opacity: 0.3;
+            transition: opacity 0.3s;
+        }
+
+        .loading-step.active {
+            opacity: 1;
+        }
+
+        .loading-step.completed {
+            opacity: 1;
+            color: #28a745;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #ee4d2d;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .checkout-container {
+                grid-template-columns: 1fr;
+            }
+
+            .checkout-steps {
+                display: none;
+            }
+
+            .security-indicators {
+                gap: 1rem;
+            }
+
+            .payment-methods {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .order-summary {
+                position: static;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">ShopSecure</a>
+            <div class="checkout-steps">
+                <div class="step">🛒 Giỏ hàng</div>
+                <div class="step active">💳 Thanh toán</div>
+                <div class="step">✅ Hoàn thành</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Security Banner -->
+        <div class="security-banner fade-in">
+            <h2>🛡️ Thanh Toán Được Bảo Mật Tối Đa</h2>
+            <p>Giao dịch của bạn được bảo vệ bởi công nghệ mã hóa và chữ ký số tiên tiến nhất</p>
+            <div class="security-indicators">
+                <div class="security-indicator">
+                    <span>🔐</span>
+                    <span>Crystal-Dilithium</span>
+                </div>
+                <div class="security-indicator">
+                    <span>🔒</span>
+                    <span>AES-256</span>
+                </div>
+                <div class="security-indicator">
+                    <span>🔑</span>
+                    <span>ECC + TLS</span>
+                </div>
+                <div class="security-indicator">
+                    <span>🧮</span>
+                    <span>SHA3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Container -->
+        <div class="checkout-container">
+            <!-- Checkout Form -->
+            <div class="checkout-form fade-in">
+                <form id="checkoutForm">
+                    <!-- Shipping Information -->
+                    <div class="form-section">
+                        <h3 class="section-title">
+                            <span>📍</span>
+                            Thông tin giao hàng
+                        </h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Họ và tên *</label>
+                                <input type="text" class="form-input encrypted" required>
+                                <span class="encryption-indicator">🔒</span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Số điện thoại *</label>
+                                <input type="tel" class="form-input encrypted" required>
+                                <span class="encryption-indicator">🔒</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email *</label>
+                            <input type="email" class="form-input encrypted" required>
+                            <span class="encryption-indicator">🔒</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Địa chỉ *</label>
+                            <input type="text" class="form-input encrypted" placeholder="Số nhà, tên đường" required>
+                            <span class="encryption-indicator">🔒</span>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Tỉnh/Thành phố *</label>
+                                <select class="form-input" required>
+                                    <option value="">Chọn tỉnh/thành</option>
+                                    <option value="ho-chi-minh">TP. Hồ Chí Minh</option>
+                                    <option value="ha-noi">Hà Nội</option>
+                                    <option value="da-nang">Đà Nẵng</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Quận/Huyện *</label>
+                                <select class="form-input" required>
+                                    <option value="">Chọn quận/huyện</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phường/Xã *</label>
+                                <select class="form-input" required>
+                                    <option value="">Chọn phường/xã</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="form-section">
+                        <h3 class="section-title">
+                            <span>💳</span>
+                            Phương thức thanh toán
+                        </h3>
+                        <div class="payment-methods">
+                            <div class="payment-method selected" data-method="card">
+                                <div class="payment-icon">💳</div>
+                                <div class="payment-name">Thẻ tín dụng/ghi nợ</div>
+                                <div class="payment-desc">Visa, Mastercard</div>
+                            </div>
+                            <div class="payment-method" data-method="ewallet">
+                                <div class="payment-icon">📱</div>
+                                <div class="payment-name">Ví điện tử</div>
+                                <div class="payment-desc">MoMo, ZaloPay</div>
+                            </div>
+                            <div class="payment-method" data-method="bank">
+                                <div class="payment-icon">🏦</div>
+                                <div class="payment-name">Chuyển khoản</div>
+                                <div class="payment-desc">Internet Banking</div>
+                            </div>
+                            <div class="payment-method" data-method="cod">
+                                <div class="payment-icon">💵</div>
+                                <div class="payment-name">Tiền mặt</div>
+                                <div class="payment-desc">Thanh toán khi nhận hàng</div>
+                            </div>
+                        </div>
+
+                        <!-- Credit Card Form -->
+                        <div class="card-form active" id="cardForm">
+                            <div class="form-grid">
+                                <div class="form-group card-number-group">
+                                    <label class="form-label">Số thẻ *</label>
+                                    <input type="text" class="form-input encrypted" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                    <div class="card-icons">
+                                        <span class="card-icon">💳</span>
+                                    </div>
+                                    <span class="encryption-indicator">🔒</span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Tên chủ thẻ *</label>
+                                    <input type="text" class="form-input encrypted" placeholder="NGUYEN VAN A" required>
+                                    <span class="encryption-indicator">🔒</span>
+                                </div>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Ngày hết hạn *</label>
+                                    <input type="text" class="form-input encrypted" placeholder="MM/YY" maxlength="5" required>
+                                    <span class="encryption-indicator">🔒</span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">CVV *</label>
+                                    <input type="text" class="form-input encrypted" placeholder="123" maxlength="4" required>
+                                    <span class="encryption-indicator">🔒</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Notes -->
+                    <div class="form-section">
+                        <h3 class="section-title">
+                            <span>📝</span>
+                            Ghi chú đơn hàng
+                        </h3>
+                        <div class="form-group">
+                            <textarea class="form-input" rows="3" placeholder="Ghi chú thêm cho đơn hàng (không bắt buộc)"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary fade-in">
+                <h3 class="summary-title">📋 Đơn hàng của bạn</h3>
+
+                <div id="orderItems">
+                    <!-- Order items will be loaded here -->
+                </div>
+
+                <div class="summary-row">
+                    <span>Tạm tính:</span>
+                    <span id="subtotalAmount">0₫</span>
+                </div>
+                <div class="summary-row">
+                    <span>Phí vận chuyển:</span>
+                    <span id="shippingAmount">0₫</span>
+                </div>
+                <div class="summary-row" id="discountRow" style="display: none;">
+                    <span>Giảm giá:</span>
+                    <span id="discountAmount" style="color: #28a745;">-0₫</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Tổng cộng:</span>
+                    <span class="total-price" id="totalAmount">0₫</span>
+                </div>
+
+                <!-- Security Info -->
+                <div class="security-info">
+                    <h4>🛡️ Bảo mật giao dịch</h4>
+                    <div class="security-features">
+                        <div class="security-feature">
+                            <span>🔐</span>
+                            <span>Chữ ký số</span>
+                        </div>
+                        <div class="security-feature">
+                            <span>🔒</span>
+                            <span>Mã hóa 256-bit</span>
+                        </div>
+                        <div class="security-feature">
+                            <span>🛡️</span>
+                            <span>Xác thực 2 lớp</span>
+                        </div>
+                        <div class="security-feature">
+                            <span>🧮</span>
+                            <span>Băm SHA3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="place-order-btn pulse" onclick="placeOrder()">
+                    🔒 Đặt hàng an toàn
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Digital Signature Modal -->
+    <div class="signature-modal" id="signatureModal">
+        <div class="signature-content">
+            <h3>✍️ Chữ ký số xác nhận</h3>
+            <p>Vui lòng ký tên để xác nhận đơn hàng</p>
+            <canvas class="signature-canvas" id="signatureCanvas" width="400" height="200"></canvas>
+            <div class="signature-buttons">
+                <button class="btn btn-secondary" onclick="clearSignature()">🗑️ Xóa</button>
+                <button class="btn btn-primary" onclick="confirmSignature()">✅ Xác nhận</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- OTP Modal -->
+    <div class="signature-modal" id="otpModal" style="display:none;">
+        <div class="signature-content">
+            <h3>🔑 Xác thực 2 lớp (OTP)</h3>
+            <p>Nhập mã OTP đã gửi về email/SMS:</p>
+            <input type="text" id="otpInput" class="form-input" maxlength="6" style="width:120px;text-align:center;">
+            <div class="signature-buttons">
+                <button class="btn btn-secondary" onclick="closeOtpModal()">Hủy</button>
+                <button class="btn btn-primary" onclick="confirmOtp()">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Modal -->
+    <div class="loading" id="loading">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h3>🛡️ Đang xử lý thanh toán an toàn</h3>
+            <div class="loading-steps">
+                <div class="loading-step" id="step1">
+                    <span>🔐</span>
+                    <span>Tạo chữ ký số Crystal-Dilithium</span>
+                </div>
+                <div class="loading-step" id="step2">
+                    <span>🔒</span>
+                    <span>Mã hóa thông tin thanh toán AES-256</span>
+                </div>
+                <div class="loading-step" id="step3">
+                    <span>🔑</span>
+                    <span>Thiết lập kết nối bảo mật ECC+TLS</span>
+                </div>
+                <div class="loading-step" id="step4">
+                    <span>🧮</span>
+                    <span>Xác minh tính toàn vẹn SHA3</span>
+                </div>
+                <div class="loading-step" id="step5">
+                    <span>✅</span>
+                    <span>Hoàn thành giao dịch</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced Security Manager for Checkout
+        class CheckoutSecurityManager {
+            constructor() {
+                this.encryptionKey = 'checkout-ultra-secure-2024';
+                this.signatureKey = 'dilithium-signature-key';
+            }
+
+            // SHA3 hashing
+            sha3Hash(data) {
+                return CryptoJS.SHA3(data, { outputLength: 256 }).toString();
+            }
+
+            // AES-256 encryption
+            aesEncrypt(data, key) {
+                return CryptoJS.AES.encrypt(data, key).toString();
+            }
+
+            // Create Crystal-Dilithium signature simulation
+            createDilithiumSignature(data) {
+                const timestamp = new Date().toISOString();
+                const hash = this.sha3Hash(data + timestamp);
+                const signature = btoa(hash + '-crystal-dilithium-' + timestamp);
+                return {
+                    signature: signature,
+                    timestamp: timestamp,
+                    algorithm: 'Crystal-Dilithium-5'
+                };
+            }
+
+            // ECC key generation simulation
+            generateECCKeyPair() {
+                const privateKey = CryptoJS.lib.WordArray.random(32).toString();
+                const publicKey = CryptoJS.SHA256(privateKey).toString();
+                return { privateKey, publicKey };
+            }
+
+            // TLS handshake simulation
+            establishTLSConnection() {
+                const sessionKey = CryptoJS.lib.WordArray.random(32).toString();
+                return {
+                    sessionKey: sessionKey,
+                    version: 'TLS 1.3',
+                    cipher: 'ECDHE-RSA-AES256-GCM-SHA384'
+                };
+            }
+
+            // Comprehensive transaction encryption
+            encryptTransaction(transactionData) {
+                const timestamp = new Date().toISOString();
+                const dataWithTimestamp = JSON.stringify({ ...transactionData, timestamp });
+                
+                // Create hash
+                const hash = this.sha3Hash(dataWithTimestamp);
+                
+                // Create signature
+                const signature = this.createDilithiumSignature(dataWithTimestamp);
+                
+                // Encrypt data
+                const encryptedData = this.aesEncrypt(dataWithTimestamp, this.encryptionKey);
+                
+                // Generate ECC keys
+                const eccKeys = this.generateECCKeyPair();
+                
+                // Establish TLS
+                const tlsConnection = this.establishTLSConnection();
+                
+                return {
+                    encryptedData: encryptedData,
+                    signature: signature,
+                    hash: hash,
+                    eccKeys: eccKeys,
+                    tlsConnection: tlsConnection,
+                    securityLevel: 'MAXIMUM'
+                };
+            }
+        }
+
+        // OTP simulation
+        function showOtpModal() {
+            document.getElementById('otpModal').style.display = 'block';
+        }
+        function closeOtpModal() {
+            document.getElementById('otpModal').style.display = 'none';
+        }
+        function confirmOtp() {
+            const otp = document.getElementById('otpInput').value;
+            if (otp === '123456') { // Demo OTP
+                closeOtpModal();
+                completeOrder();
+            } else {
+                alert('Mã OTP không đúng!');
+            }
+        }
+
+        // Xử lý nút đặt hàng
+        function placeOrder() {
+            // Lấy dữ liệu form (demo)
+            const form = document.getElementById('checkoutForm');
+            const data = {
+                name: form.querySelector('input[type="text"]').value,
+                phone: form.querySelector('input[type="tel"]').value,
+                email: form.querySelector('input[type="email"]').value,
+                address: form.querySelector('input[placeholder="Số nhà, tên đường"]').value,
+                // ... lấy thêm các trường khác nếu cần ...
+            };
+            // Bảo mật, mã hóa, ký số...
+            window.securityManager = new CheckoutSecurityManager();
+            window.secureResult = window.securityManager.encryptTransaction(data);
+            // Sau khi ký số thành công:
+            document.getElementById('signatureModal').style.display = 'block';
+        }
+        function confirmSignature() {
+            document.getElementById('signatureModal').style.display = 'none';
+            showOtpModal();
+        }
+        function completeOrder() {
+            document.getElementById('loading').style.display = 'block';
+            // Hiển thị từng bước bảo mật
+            let step = 1;
+            function nextStep() {
+                if (step > 5) {
+                    document.getElementById('loading').style.display = 'none';
+                    alert('Đặt hàng thành công với bảo mật tối đa!');
+                    return;
+                }
+                for (let i = 1; i <= 5; i++) {
+                    const el = document.getElementById('step' + i);
+                    el.classList.remove('active', 'completed');
+                    if (i < step) el.classList.add('completed');
+                    else if (i === step) el.classList.add('active');
+                }
+                step++;
+                setTimeout(nextStep, 600);
+            }
+            nextStep();
+        }
+
+        // Signature canvas (demo)
+        const canvas = document.getElementById('signatureCanvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let drawing = false;
+            canvas.onmousedown = e => { drawing = true; ctx.beginPath(); ctx.moveTo(e.offsetX, e.offsetY); };
+            canvas.onmousemove = e => { if (drawing) { ctx.lineTo(e.offsetX, e.offsetY); ctx.stroke(); } };
+            canvas.onmouseup = () => { drawing = false; };
+            canvas.onmouseleave = () => { drawing = false; };
+        }
+        function clearSignature() {
+            const canvas = document.getElementById('signatureCanvas');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+    </script>
+</body>
+</html>

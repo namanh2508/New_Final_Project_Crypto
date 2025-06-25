@@ -33,3 +33,640 @@ WARNING 2025-06-16 17:15:11,461 log 31140 23956 Not Found: /
 WARNING 2025-06-16 17:15:11,462 basehttp 31140 23956 "GET / HTTP/1.1" 404 3023
 WARNING 2025-06-16 17:15:43,769 log 31140 24696 Not Found: /
 WARNING 2025-06-16 17:15:43,769 basehttp 31140 24696 "GET / HTTP/1.1" 404 3023
+INFO 2025-06-24 19:30:55,129 autoreload 13512 5140 Watching for file changes with StatReloader
+WARNING 2025-06-24 19:31:02,907 log 13512 16632 Not Found: /
+WARNING 2025-06-24 19:31:02,909 basehttp 13512 16632 "GET / HTTP/1.1" 404 3023
+WARNING 2025-06-24 19:31:03,037 log 13512 16632 Not Found: /favicon.ico
+WARNING 2025-06-24 19:31:03,038 basehttp 13512 16632 "GET /favicon.ico HTTP/1.1" 404 3145
+WARNING 2025-06-24 19:31:25,983 log 13512 20396 Not Found: /api/buýe
+WARNING 2025-06-24 19:31:25,987 basehttp 13512 20396 "GET /api/bu%C3%BDe HTTP/1.1" 404 3141
+WARNING 2025-06-24 19:31:33,067 log 13512 11128 Not Found: /api/buyers
+WARNING 2025-06-24 19:31:33,068 basehttp 13512 11128 "GET /api/buyers HTTP/1.1" 404 3141
+WARNING 2025-06-24 19:31:35,078 log 13512 11128 Not Found: /api/buyers
+WARNING 2025-06-24 19:31:35,079 basehttp 13512 11128 "GET /api/buyers HTTP/1.1" 404 3141
+WARNING 2025-06-24 19:31:49,751 log 13512 12348 Not Found: /admin
+WARNING 2025-06-24 19:31:49,752 basehttp 13512 12348 "GET /admin HTTP/1.1" 404 3121
+WARNING 2025-06-24 19:31:53,351 log 13512 12348 Not Found: /admin
+WARNING 2025-06-24 19:31:53,352 basehttp 13512 12348 "GET /admin HTTP/1.1" 404 3121
+WARNING 2025-06-24 19:31:55,610 log 13512 12348 Not Found: /
+WARNING 2025-06-24 19:31:55,611 basehttp 13512 12348 "GET / HTTP/1.1" 404 3023
+WARNING 2025-06-24 19:32:00,528 log 13512 9320 Not Found: /admin
+WARNING 2025-06-24 19:32:00,529 basehttp 13512 9320 "GET /admin HTTP/1.1" 404 3121
+INFO 2025-06-24 19:32:06,632 basehttp 13512 9320 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-24 19:32:06,815 basehttp 13512 9320 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-06-24 19:32:07,242 basehttp 13512 17696 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-06-24 19:32:07,245 basehttp 13512 15820 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-06-24 19:32:07,246 basehttp 13512 9460 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18557
+INFO 2025-06-24 19:32:07,250 basehttp 13512 12548 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-06-24 19:32:07,254 basehttp 13512 11204 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-06-24 19:32:07,267 basehttp 13512 17696 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-06-24 19:32:07,274 basehttp 13512 9320 "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+WARNING 2025-06-24 19:32:11,000 log 13512 14288 Not Found: /admin
+WARNING 2025-06-24 19:32:11,001 basehttp 13512 14288 "GET /admin HTTP/1.1" 404 3121
+WARNING 2025-06-24 19:32:18,170 log 13512 14288 Forbidden: /api/buyers/
+WARNING 2025-06-24 19:32:18,172 basehttp 13512 14288 "GET /api/buyers/ HTTP/1.1" 403 9690
+INFO 2025-06-24 19:32:18,195 basehttp 13512 17964 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-06-24 19:32:18,203 basehttp 13512 20352 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-06-24 19:32:18,224 basehttp 13512 14288 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-06-24 19:32:18,227 basehttp 13512 6032 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-06-24 19:32:18,254 basehttp 13512 17964 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-06-24 19:32:18,255 basehttp 13512 19504 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-06-24 19:32:18,289 basehttp 13512 6032 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-06-24 19:32:18,291 basehttp 13512 19504 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2025-06-24 19:32:18,291 basehttp 13512 14288 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-06-24 19:32:18,309 basehttp 13512 17964 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-06-24 19:32:18,324 basehttp 13512 15008 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-06-24 19:32:18,355 basehttp 13512 20352 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-06-24 21:34:19,313 autoreload 13780 15448 Watching for file changes with StatReloader
+WARNING 2025-06-24 21:52:44,122 log 13780 22852 Not Found: /products/categories/
+WARNING 2025-06-24 21:52:44,125 log 13780 23504 Not Found: /products/trending/
+WARNING 2025-06-24 21:52:44,126 log 13780 27240 Not Found: /products/featured/
+WARNING 2025-06-24 21:52:44,131 basehttp 13780 22852 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 21:52:44,131 basehttp 13780 23504 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 21:52:44,131 basehttp 13780 27240 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 21:52:44,152 log 13780 23504 Not Found: /products/featured/
+WARNING 2025-06-24 21:52:44,154 log 13780 27240 Not Found: /products/categories/
+WARNING 2025-06-24 21:52:44,155 log 13780 22852 Not Found: /products/trending/
+WARNING 2025-06-24 21:52:44,156 basehttp 13780 27240 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 21:52:44,156 basehttp 13780 23504 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 21:52:44,156 basehttp 13780 22852 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 21:52:44,166 log 13780 27240 Not Found: /products/trending/
+WARNING 2025-06-24 21:52:44,167 basehttp 13780 27240 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 21:52:44,289 log 13780 27240 Not Found: /products/
+WARNING 2025-06-24 21:52:44,293 basehttp 13780 27240 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 21:52:44,316 log 13780 27240 Not Found: /products/
+WARNING 2025-06-24 21:52:44,322 basehttp 13780 27240 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 22:45:22,141 log 13780 10932 Not Found: /products/trending/
+WARNING 2025-06-24 22:45:22,144 log 13780 20624 Not Found: /products/featured/
+WARNING 2025-06-24 22:45:22,146 log 13780 26268 Not Found: /products/categories/
+WARNING 2025-06-24 22:45:22,150 basehttp 13780 10932 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:45:22,150 basehttp 13780 20624 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:45:22,150 basehttp 13780 26268 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 22:45:22,167 log 13780 26268 Not Found: /products/featured/
+WARNING 2025-06-24 22:45:22,168 log 13780 20624 Not Found: /products/categories/
+WARNING 2025-06-24 22:45:22,170 log 13780 10932 Not Found: /products/trending/
+WARNING 2025-06-24 22:45:22,171 basehttp 13780 26268 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:45:22,172 basehttp 13780 10932 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:45:22,172 basehttp 13780 20624 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 22:45:22,232 log 13780 10932 Not Found: /products/
+WARNING 2025-06-24 22:45:22,232 basehttp 13780 10932 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 22:45:22,240 log 13780 20624 Not Found: /products/
+WARNING 2025-06-24 22:45:22,241 basehttp 13780 20624 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 22:45:22,246 log 13780 20624 Not Found: /products/
+WARNING 2025-06-24 22:45:22,246 basehttp 13780 20624 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 22:45:38,185 log 13780 19256 Not Found: /products/featured/
+WARNING 2025-06-24 22:45:38,187 log 13780 17804 Not Found: /products/trending/
+WARNING 2025-06-24 22:45:38,190 basehttp 13780 19256 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:45:38,195 basehttp 13780 17804 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:45:38,208 log 13780 19104 Not Found: /products/categories/
+WARNING 2025-06-24 22:45:38,212 basehttp 13780 19104 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 22:45:38,213 log 13780 19256 Not Found: /products/featured/
+WARNING 2025-06-24 22:45:38,220 basehttp 13780 19256 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:45:38,234 log 13780 17804 Not Found: /products/trending/
+WARNING 2025-06-24 22:45:38,236 log 13780 19104 Not Found: /products/categories/
+WARNING 2025-06-24 22:45:38,242 basehttp 13780 19104 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 22:45:38,242 basehttp 13780 17804 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:45:38,253 log 13780 19256 Not Found: /products/featured/
+WARNING 2025-06-24 22:45:38,259 basehttp 13780 19256 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:45:38,269 log 13780 19104 Not Found: /products/
+WARNING 2025-06-24 22:45:38,273 basehttp 13780 19104 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 22:45:38,275 log 13780 17804 Not Found: /products/categories/
+WARNING 2025-06-24 22:45:38,296 basehttp 13780 17804 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 22:45:38,298 log 13780 19256 Not Found: /products/trending/
+WARNING 2025-06-24 22:45:38,305 log 13780 19104 Not Found: /products/
+WARNING 2025-06-24 22:45:38,309 basehttp 13780 19104 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 22:45:38,308 basehttp 13780 19256 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:45:38,336 log 13780 19104 Not Found: /products/
+WARNING 2025-06-24 22:45:38,345 basehttp 13780 19104 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 22:46:49,011 log 13780 21640 Not Found: /products/featured/
+WARNING 2025-06-24 22:46:49,012 basehttp 13780 21640 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:46:49,013 log 13780 21536 Not Found: /products/trending/
+WARNING 2025-06-24 22:46:49,014 log 13780 25196 Not Found: /products/categories/
+WARNING 2025-06-24 22:46:49,017 basehttp 13780 21536 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:46:49,018 basehttp 13780 25196 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 22:46:49,036 log 13780 21640 Not Found: /products/featured/
+WARNING 2025-06-24 22:46:49,037 log 13780 21536 Not Found: /products/trending/
+WARNING 2025-06-24 22:46:49,038 basehttp 13780 21640 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:46:49,040 log 13780 25196 Not Found: /products/categories/
+WARNING 2025-06-24 22:46:49,040 basehttp 13780 21536 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:46:49,045 basehttp 13780 25196 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 22:46:49,058 log 13780 21640 Not Found: /products/
+WARNING 2025-06-24 22:46:49,060 log 13780 21536 Not Found: /products/featured/
+WARNING 2025-06-24 22:46:49,061 basehttp 13780 21536 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:46:49,061 basehttp 13780 21640 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 22:46:49,063 log 13780 25196 Not Found: /products/trending/
+WARNING 2025-06-24 22:46:49,070 basehttp 13780 25196 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 22:46:49,080 log 13780 21640 Not Found: /products/categories/
+WARNING 2025-06-24 22:46:49,081 log 13780 21536 Not Found: /products/
+WARNING 2025-06-24 22:46:49,082 basehttp 13780 21640 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 22:46:49,083 basehttp 13780 21536 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 22:46:49,097 log 13780 21536 Not Found: /products/
+WARNING 2025-06-24 22:46:49,098 basehttp 13780 21536 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+INFO 2025-06-24 22:50:04,157 autoreload 18364 26708 Watching for file changes with StatReloader
+INFO 2025-06-24 22:50:31,969 autoreload 23428 26392 Watching for file changes with StatReloader
+WARNING 2025-06-24 22:51:06,185 log 23428 27220 Not Found: /
+WARNING 2025-06-24 22:51:06,186 basehttp 23428 27220 "GET / HTTP/1.1" 404 3023
+WARNING 2025-06-24 22:51:21,877 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:21,878 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:21,892 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:21,901 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:21,963 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:21,965 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:21,986 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:21,991 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,020 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:22,031 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,061 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:22,062 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,074 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:22,076 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,103 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:22,111 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,125 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:22,127 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,162 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,165 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:22,166 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,166 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,192 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,196 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,200 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:22,203 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,233 log 23428 23380 Not Found: /products/
+WARNING 2025-06-24 22:51:22,234 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,235 basehttp 23428 23380 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,236 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,257 log 23428 7596 Not Found: /products/
+WARNING 2025-06-24 22:51:22,261 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,262 basehttp 23428 7596 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,263 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,299 log 23428 7596 Not Found: /products/
+WARNING 2025-06-24 22:51:22,302 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,302 basehttp 23428 7596 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,304 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,321 log 23428 7596 Not Found: /products/
+WARNING 2025-06-24 22:51:22,323 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,324 basehttp 23428 7596 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,326 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,363 log 23428 7596 Not Found: /products/
+WARNING 2025-06-24 22:51:22,376 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,377 basehttp 23428 7596 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,381 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,428 log 23428 7596 Not Found: /products/
+WARNING 2025-06-24 22:51:22,430 basehttp 23428 7596 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,432 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,434 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,461 log 23428 7596 Not Found: /products/
+WARNING 2025-06-24 22:51:22,469 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,470 basehttp 23428 7596 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,472 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,497 log 23428 7596 Not Found: /products/
+WARNING 2025-06-24 22:51:22,500 basehttp 23428 7596 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,502 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,509 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,534 log 23428 7596 Not Found: /products/
+WARNING 2025-06-24 22:51:22,536 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,537 basehttp 23428 7596 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,538 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 22:51:22,552 log 23428 9224 Not Found: /products/
+WARNING 2025-06-24 22:51:22,555 basehttp 23428 9224 "GET /products/?page=1&page_size=20&ordering= HTTP/1.1" 404 3106
+WARNING 2025-06-24 23:03:42,327 log 23428 26356 Not Found: /products/featured/
+WARNING 2025-06-24 23:03:42,338 log 23428 18500 Not Found: /products/categories/
+WARNING 2025-06-24 23:03:42,341 log 23428 18084 Not Found: /products/trending/
+WARNING 2025-06-24 23:03:42,342 basehttp 23428 26356 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 23:03:42,342 basehttp 23428 18500 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 23:03:42,345 basehttp 23428 18084 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 23:03:42,389 log 23428 26356 Not Found: /products/featured/
+WARNING 2025-06-24 23:03:42,525 log 23428 18500 Not Found: /products/categories/
+WARNING 2025-06-24 23:03:42,588 log 23428 26900 Not Found: /products/
+WARNING 2025-06-24 23:03:42,566 basehttp 23428 26356 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 23:03:42,565 log 23428 18084 Not Found: /products/trending/
+WARNING 2025-06-24 23:03:42,607 basehttp 23428 18500 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 23:03:42,629 basehttp 23428 26900 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 23:03:42,648 basehttp 23428 18084 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 23:03:42,753 log 23428 26356 Not Found: /products/featured/
+WARNING 2025-06-24 23:03:42,778 basehttp 23428 26356 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 23:03:42,777 log 23428 18500 Not Found: /products/categories/
+WARNING 2025-06-24 23:03:42,816 log 23428 26900 Not Found: /products/
+WARNING 2025-06-24 23:03:42,817 basehttp 23428 18500 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 23:03:42,833 basehttp 23428 26900 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 23:03:42,857 log 23428 18084 Not Found: /products/trending/
+WARNING 2025-06-24 23:03:42,899 basehttp 23428 18084 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 23:03:42,933 log 23428 26900 Not Found: /products/
+WARNING 2025-06-24 23:03:42,947 basehttp 23428 26900 "GET /products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 404 3139
+WARNING 2025-06-24 23:07:32,163 log 23428 14888 Not Found: /products/trending/
+WARNING 2025-06-24 23:07:32,164 log 23428 10600 Not Found: /products/featured/
+WARNING 2025-06-24 23:07:32,165 log 23428 7028 Not Found: /products/categories/
+WARNING 2025-06-24 23:07:32,179 basehttp 23428 14888 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 23:07:32,179 basehttp 23428 7028 "GET /products/categories/ HTTP/1.1" 404 3180
+INFO 2025-06-24 23:07:32,179 basehttp 23428 15704 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+WARNING 2025-06-24 23:07:32,179 basehttp 23428 10600 "GET /products/featured/ HTTP/1.1" 404 3172
+INFO 2025-06-24 23:07:32,257 basehttp 23428 7028 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:07:32,262 basehttp 23428 10600 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:07:32,270 basehttp 23428 10600 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:07:53,014 basehttp 23428 24016 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+WARNING 2025-06-24 23:07:53,021 log 23428 20844 Not Found: /products/featured/
+WARNING 2025-06-24 23:07:53,023 log 23428 3720 Not Found: /products/categories/
+WARNING 2025-06-24 23:07:53,024 basehttp 23428 20844 "GET /products/featured/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 23:07:53,024 log 23428 10632 Not Found: /products/trending/
+WARNING 2025-06-24 23:07:53,025 basehttp 23428 3720 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 23:07:53,026 basehttp 23428 10632 "GET /products/trending/ HTTP/1.1" 404 3172
+INFO 2025-06-24 23:07:53,075 basehttp 23428 10632 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:07:53,082 basehttp 23428 3720 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:07:53,093 basehttp 23428 3720 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:07:54,684 basehttp 23428 3720 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+WARNING 2025-06-24 23:07:54,692 log 23428 20844 Not Found: /products/trending/
+WARNING 2025-06-24 23:07:54,692 log 23428 24016 Not Found: /products/categories/
+WARNING 2025-06-24 23:07:54,694 log 23428 10632 Not Found: /products/featured/
+WARNING 2025-06-24 23:07:54,694 basehttp 23428 20844 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 23:07:54,695 basehttp 23428 24016 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 23:07:54,695 basehttp 23428 10632 "GET /products/featured/ HTTP/1.1" 404 3172
+INFO 2025-06-24 23:07:54,768 basehttp 23428 24016 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:07:54,774 basehttp 23428 10632 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:07:54,780 basehttp 23428 10632 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:07:58,701 basehttp 23428 10632 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+WARNING 2025-06-24 23:07:58,707 log 23428 20844 Not Found: /products/trending/
+WARNING 2025-06-24 23:07:58,709 log 23428 3720 Not Found: /products/categories/
+WARNING 2025-06-24 23:07:58,710 log 23428 24016 Not Found: /products/featured/
+WARNING 2025-06-24 23:07:58,710 basehttp 23428 20844 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 23:07:58,711 basehttp 23428 3720 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 23:07:58,711 basehttp 23428 24016 "GET /products/featured/ HTTP/1.1" 404 3172
+INFO 2025-06-24 23:07:58,780 basehttp 23428 24016 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:07:58,787 basehttp 23428 3720 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:07:58,793 basehttp 23428 3720 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:08:02,683 basehttp 23428 3720 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+WARNING 2025-06-24 23:08:02,687 log 23428 10632 Not Found: /products/categories/
+WARNING 2025-06-24 23:08:02,689 basehttp 23428 10632 "GET /products/categories/ HTTP/1.1" 404 3180
+WARNING 2025-06-24 23:08:02,691 log 23428 20844 Not Found: /products/trending/
+WARNING 2025-06-24 23:08:02,692 log 23428 24016 Not Found: /products/featured/
+WARNING 2025-06-24 23:08:02,692 basehttp 23428 20844 "GET /products/trending/ HTTP/1.1" 404 3172
+WARNING 2025-06-24 23:08:02,693 basehttp 23428 24016 "GET /products/featured/ HTTP/1.1" 404 3172
+INFO 2025-06-24 23:08:02,770 basehttp 23428 24016 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:08:02,780 basehttp 23428 20844 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:08:02,789 basehttp 23428 20844 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:23,003 basehttp 23428 20952 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:23,008 basehttp 23428 10080 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:09:23,008 basehttp 23428 25444 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:09:23,033 basehttp 23428 26596 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:23,059 basehttp 23428 26596 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:23,068 basehttp 23428 25444 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:23,076 basehttp 23428 25444 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:30,320 basehttp 23428 26596 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:09:30,320 basehttp 23428 25444 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:09:30,320 basehttp 23428 10080 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:30,334 basehttp 23428 25444 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:30,337 basehttp 23428 20952 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:09:30,339 basehttp 23428 25760 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:09:30,347 basehttp 23428 25444 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:30,351 basehttp 23428 20952 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:09:30,351 basehttp 23428 25760 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:09:30,373 basehttp 23428 25760 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:30,390 basehttp 23428 20952 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:30,398 basehttp 23428 20952 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,502 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,515 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,539 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,575 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,600 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,626 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,650 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,687 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,716 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,737 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,752 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,777 basehttp 23428 7444 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,781 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,823 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,824 basehttp 23428 7444 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,852 basehttp 23428 22192 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,860 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,890 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,920 basehttp 23428 22192 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,920 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,956 basehttp 23428 22192 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,958 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,982 basehttp 23428 17684 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:37,987 basehttp 23428 22192 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:38,009 basehttp 23428 7444 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:38,017 basehttp 23428 22192 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:38,041 basehttp 23428 7444 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:38,041 basehttp 23428 22192 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:38,058 basehttp 23428 7444 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:38,059 basehttp 23428 22192 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:38,083 basehttp 23428 7444 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:09:38,107 basehttp 23428 7444 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:10:44,504 autoreload 23428 26392 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\products\views.py changed, reloading.
+INFO 2025-06-24 23:10:47,351 autoreload 24460 21692 Watching for file changes with StatReloader
+INFO 2025-06-24 23:10:55,558 basehttp 24460 27248 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:10:55,568 basehttp 24460 27248 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:10:55,576 basehttp 24460 27248 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:10:55,591 basehttp 24460 27248 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:10:55,610 basehttp 24460 27248 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:10:55,620 basehttp 24460 27248 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:10:55,634 basehttp 24460 27248 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:10:55,654 basehttp 24460 27248 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:10:55,665 basehttp 24460 27248 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,336 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,346 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,356 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,379 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,399 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,422 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,432 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,445 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,459 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,476 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,486 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,501 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,517 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:11:18,527 basehttp 24460 25200 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:12:03,969 basehttp 24460 23220 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:12:03,970 basehttp 24460 24544 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:12:03,975 basehttp 24460 23220 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:12:03,979 basehttp 24460 24544 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:12:03,986 basehttp 24460 23220 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:12:03,986 basehttp 24460 24448 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:12:03,998 basehttp 24460 24544 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:12:04,003 basehttp 24460 23220 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:12:04,006 basehttp 24460 24448 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:12:04,020 basehttp 24460 24544 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:12:04,022 basehttp 24460 24448 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:12:04,033 basehttp 24460 24544 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+WARNING 2025-06-24 23:12:47,099 log 24460 17236 Not Found: /api/buyers/register/
+WARNING 2025-06-24 23:12:47,100 basehttp 24460 17236 "OPTIONS /api/buyers/register/ HTTP/1.1" 404 7391
+WARNING 2025-06-24 23:12:59,006 log 24460 24704 Not Found: /api/buyers/register/
+WARNING 2025-06-24 23:12:59,007 basehttp 24460 24704 "OPTIONS /api/buyers/register/ HTTP/1.1" 404 7391
+WARNING 2025-06-24 23:13:16,520 log 24460 18336 Not Found: /api/buyers/register/
+WARNING 2025-06-24 23:13:16,520 basehttp 24460 18336 "OPTIONS /api/buyers/register/ HTTP/1.1" 404 7391
+INFO 2025-06-24 23:31:39,446 autoreload 16256 22012 Watching for file changes with StatReloader
+INFO 2025-06-24 23:34:09,174 basehttp 16256 1896 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:34:09,175 basehttp 16256 14372 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:34:09,230 basehttp 16256 10800 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:34:09,235 basehttp 16256 14372 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:34:09,242 basehttp 16256 1896 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:34:09,270 basehttp 16256 14372 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:34:09,271 basehttp 16256 10800 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:34:09,279 basehttp 16256 1896 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:34:09,294 basehttp 16256 10800 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:34:10,012 basehttp 16256 10800 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:34:10,072 basehttp 16256 10800 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:43:50,996 basehttp 16256 23716 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:43:50,997 basehttp 16256 13256 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:43:50,997 basehttp 16256 22668 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:43:51,003 basehttp 16256 23716 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:43:51,019 basehttp 16256 22668 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:43:51,020 basehttp 16256 23716 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:43:51,020 basehttp 16256 13256 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:43:51,087 basehttp 16256 23716 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:43:51,094 basehttp 16256 13256 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:43:51,099 basehttp 16256 13256 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:52:53,142 basehttp 16256 10524 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:52:53,143 basehttp 16256 18476 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:52:53,143 basehttp 16256 18296 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:52:53,160 basehttp 16256 18476 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:52:53,165 basehttp 16256 18296 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:52:53,167 basehttp 16256 18476 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:52:53,171 basehttp 16256 10524 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:52:53,176 basehttp 16256 10524 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:52:53,215 basehttp 16256 10524 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:52:53,228 basehttp 16256 10524 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+WARNING 2025-06-24 23:53:14,142 log 16256 12144 Not Found: /api/buyers/register/
+WARNING 2025-06-24 23:53:14,144 basehttp 16256 12144 "OPTIONS /api/buyers/register/ HTTP/1.1" 404 7391
+WARNING 2025-06-24 23:54:01,007 log 16256 26356 Not Found: /
+WARNING 2025-06-24 23:54:01,009 basehttp 16256 26356 "GET / HTTP/1.1" 404 3023
+INFO 2025-06-24 23:54:01,679 basehttp 16256 12708 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:54:01,681 basehttp 16256 21800 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:54:01,691 basehttp 16256 9284 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:54:01,701 basehttp 16256 12708 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:54:01,707 basehttp 16256 9284 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:54:01,708 basehttp 16256 21800 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:54:01,726 basehttp 16256 9284 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-24 23:54:01,727 basehttp 16256 12708 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:54:01,731 basehttp 16256 21800 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-24 23:54:01,926 basehttp 16256 21800 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-24 23:54:01,942 basehttp 16256 21800 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:05:09,441 autoreload 22048 24640 Watching for file changes with StatReloader
+INFO 2025-06-25 00:05:23,445 basehttp 22048 13260 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:05:23,445 basehttp 22048 26332 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:05:23,447 basehttp 22048 17672 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:05:23,462 basehttp 22048 13260 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:05:23,462 basehttp 22048 26332 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:05:23,468 basehttp 22048 26332 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:05:23,474 basehttp 22048 17672 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:05:23,479 basehttp 22048 17672 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:05:23,507 basehttp 22048 17672 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:05:23,516 basehttp 22048 26332 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:05:23,524 basehttp 22048 26332 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:20,927 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:20,942 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:20,956 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:20,967 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:20,977 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:20,992 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,008 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,025 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,038 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,052 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,065 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,076 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,090 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,105 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,124 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,137 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,147 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,171 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,172 basehttp 22048 23228 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,193 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,193 basehttp 22048 23228 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,212 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,216 basehttp 22048 23228 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,238 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,239 basehttp 22048 23228 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,255 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,256 basehttp 22048 23228 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,274 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,275 basehttp 22048 23228 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,292 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,292 basehttp 22048 23228 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,309 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,314 basehttp 22048 23228 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,330 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,336 basehttp 22048 23228 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,350 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:14:21,360 basehttp 22048 23844 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:19:14,411 basehttp 22048 26176 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:19:14,411 basehttp 22048 24896 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:19:14,420 basehttp 22048 15256 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:19:14,424 basehttp 22048 26176 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:19:14,424 basehttp 22048 24896 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:19:14,431 basehttp 22048 15256 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:19:14,434 basehttp 22048 26176 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:19:14,435 basehttp 22048 24896 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:19:14,443 basehttp 22048 24896 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:19:14,453 basehttp 22048 26176 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:19:14,461 basehttp 22048 26176 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:20:29,916 autoreload 22048 24640 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\project\settings.py changed, reloading.
+INFO 2025-06-25 00:20:30,989 autoreload 26868 2016 Watching for file changes with StatReloader
+INFO 2025-06-25 00:27:40,037 basehttp 26868 16868 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:27:40,045 basehttp 26868 8064 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:27:40,045 basehttp 26868 26232 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:27:40,118 basehttp 26868 24184 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:27:40,142 basehttp 26868 16868 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:27:40,142 basehttp 26868 8064 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:27:40,142 basehttp 26868 26232 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:27:40,152 basehttp 26868 24184 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:27:40,160 basehttp 26868 16868 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:27:40,160 basehttp 26868 8064 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:27:40,174 basehttp 26868 8064 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:33:42,089 basehttp 26868 27388 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:33:42,097 basehttp 26868 5108 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:33:42,100 basehttp 26868 17040 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:33:42,117 basehttp 26868 5820 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:33:42,117 basehttp 26868 5108 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:33:42,117 basehttp 26868 27388 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:33:42,135 basehttp 26868 27388 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:33:42,136 basehttp 26868 5108 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:33:42,206 basehttp 26868 5108 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:33:42,217 basehttp 26868 27388 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:33:42,227 basehttp 26868 27388 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:01,549 basehttp 26868 24880 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:01,552 basehttp 26868 24968 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:01,553 basehttp 26868 10340 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:01,569 basehttp 26868 24880 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:01,571 basehttp 26868 24968 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:01,573 basehttp 26868 10340 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:01,584 basehttp 26868 24880 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:01,587 basehttp 26868 10340 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:01,588 basehttp 26868 24968 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:01,637 basehttp 26868 10340 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:01,645 basehttp 26868 24968 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:01,660 basehttp 26868 24968 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:19,080 basehttp 26868 23148 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:19,094 basehttp 26868 23148 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:19,095 basehttp 26868 13760 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:19,095 basehttp 26868 7356 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:19,105 basehttp 26868 7356 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:19,106 basehttp 26868 23148 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:19,118 basehttp 26868 7356 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:19,118 basehttp 26868 23148 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:19,179 basehttp 26868 23148 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:19,187 basehttp 26868 23148 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:37,431 basehttp 26868 17504 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:37,432 basehttp 26868 8352 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:37,439 basehttp 26868 3328 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:37,445 basehttp 26868 17504 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:37,446 basehttp 26868 8352 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:37,454 basehttp 26868 3328 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:37,458 basehttp 26868 17504 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:37,462 basehttp 26868 3328 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:37,472 basehttp 26868 8352 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:37,482 basehttp 26868 8352 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:37,488 basehttp 26868 3328 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:37,495 basehttp 26868 3328 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:52,805 basehttp 26868 21748 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:52,805 basehttp 26868 12648 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:52,806 basehttp 26868 7856 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:52,830 basehttp 26868 21748 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:52,831 basehttp 26868 12648 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:52,832 basehttp 26868 7856 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:52,846 basehttp 26868 21748 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:52,849 basehttp 26868 12648 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:52,850 basehttp 26868 7856 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:34:52,913 basehttp 26868 7856 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:34:52,926 basehttp 26868 7856 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:35:45,056 basehttp 26868 21304 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:35:45,056 basehttp 26868 26772 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:35:45,056 basehttp 26868 24000 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:35:45,067 basehttp 26868 26772 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:35:45,067 basehttp 26868 21304 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:35:45,068 basehttp 26868 24000 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:35:45,078 basehttp 26868 21304 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:35:45,078 basehttp 26868 26772 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:35:45,172 basehttp 26868 26772 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:35:45,178 basehttp 26868 21304 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:35:45,185 basehttp 26868 21304 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:27,818 basehttp 26868 25780 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:27,822 basehttp 26868 26948 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:40:27,822 basehttp 26868 26220 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:40:27,847 basehttp 26868 25780 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:27,852 basehttp 26868 26220 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:40:27,858 basehttp 26868 26948 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:40:27,865 basehttp 26868 25780 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:40:27,870 basehttp 26868 26948 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 00:40:27,912 basehttp 26868 26948 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:27,925 basehttp 26868 25780 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:27,938 basehttp 26868 25780 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,692 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,701 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,728 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,739 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,750 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,771 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,780 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,793 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,802 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,816 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,826 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,834 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:40:45,841 basehttp 26868 24508 "GET /api/products/?page=1&page_size=20&ordering= HTTP/1.1" 200 52
+WARNING 2025-06-25 00:42:39,107 log 26868 7564 Not Found: /api/buyers/register/
+WARNING 2025-06-25 00:42:39,108 basehttp 26868 7564 "OPTIONS /api/buyers/register/ HTTP/1.1" 404 7277
+WARNING 2025-06-25 00:43:11,664 log 26868 26920 Not Found: /api/buyers/register/
+WARNING 2025-06-25 00:43:11,664 basehttp 26868 26920 "OPTIONS /api/buyers/register/ HTTP/1.1" 404 7277
+INFO 2025-06-25 00:47:39,554 basehttp 26868 1972 "GET /api/products/?search=Laptop&page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:47:39,568 basehttp 26868 1972 "GET /api/products/?search=Laptop&page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:47:39,579 basehttp 26868 1972 "GET /api/products/?search=Laptop&page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:47:41,027 basehttp 26868 1972 "GET /api/products/?search=Gi%C3%A0y+th%E1%BB%83+thao&page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:47:42,437 basehttp 26868 1972 "GET /api/products/?search=iPhone+15&page=1&page_size=20&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 00:51:54,436 autoreload 26868 2016 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\buyers\urls.py changed, reloading.
+INFO 2025-06-25 00:51:56,647 autoreload 5704 17932 Watching for file changes with StatReloader
+INFO 2025-06-25 00:54:32,034 autoreload 5704 17932 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\buyers\urls.py changed, reloading.
+INFO 2025-06-25 00:54:33,137 autoreload 12040 23680 Watching for file changes with StatReloader
+INFO 2025-06-25 00:57:07,324 autoreload 12040 23680 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\buyers\urls.py changed, reloading.
+INFO 2025-06-25 00:57:08,202 autoreload 25688 22972 Watching for file changes with StatReloader
+INFO 2025-06-25 00:57:11,034 autoreload 25688 22972 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\buyers\urls.py changed, reloading.
+INFO 2025-06-25 00:57:11,813 autoreload 23752 12648 Watching for file changes with StatReloader
+INFO 2025-06-25 00:58:51,221 autoreload 23752 12648 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\buyers\urls.py changed, reloading.
+INFO 2025-06-25 00:58:52,120 autoreload 25124 11820 Watching for file changes with StatReloader
+INFO 2025-06-25 01:00:40,178 autoreload 25124 11820 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\buyers\urls.py changed, reloading.
+INFO 2025-06-25 01:00:41,038 autoreload 19396 7568 Watching for file changes with StatReloader
+INFO 2025-06-25 01:01:16,601 autoreload 19396 7568 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\buyers\urls.py changed, reloading.
+INFO 2025-06-25 01:01:17,472 autoreload 8204 9368 Watching for file changes with StatReloader
+WARNING 2025-06-25 01:05:19,393 log 8204 14828 Bad Request: /api/buyers/buyers/register/
+WARNING 2025-06-25 01:05:19,410 basehttp 8204 14828 "POST /api/buyers/buyers/register/ HTTP/1.1" 400 231
+WARNING 2025-06-25 01:07:14,255 log 8204 1900 Forbidden: /api/buyers/buyers/register/
+WARNING 2025-06-25 01:07:14,257 basehttp 8204 1900 "GET /api/buyers/buyers/register/ HTTP/1.1" 403 58
+WARNING 2025-06-25 01:07:48,074 log 8204 27328 Forbidden: /api/buyers/buyers/register/
+WARNING 2025-06-25 01:07:48,077 basehttp 8204 27328 "GET /api/buyers/buyers/register/ HTTP/1.1" 403 8643
+INFO 2025-06-25 01:07:48,431 basehttp 8204 22448 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-06-25 01:07:48,432 basehttp 8204 20704 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-06-25 01:07:48,445 basehttp 8204 27328 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-06-25 01:07:48,455 basehttp 8204 22448 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-06-25 01:07:48,485 basehttp 8204 1604 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-06-25 01:07:48,487 basehttp 8204 26196 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-06-25 01:07:48,500 basehttp 8204 22448 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-06-25 01:07:48,502 basehttp 8204 26196 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2025-06-25 01:07:48,506 basehttp 8204 27328 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-06-25 01:07:48,521 basehttp 8204 20704 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-06-25 01:07:48,522 basehttp 8204 1604 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-06-25 01:07:48,543 basehttp 8204 26680 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+WARNING 2025-06-25 01:07:48,657 log 8204 26680 Not Found: /favicon.ico
+WARNING 2025-06-25 01:07:48,658 basehttp 8204 26680 "GET /favicon.ico HTTP/1.1" 404 3039
+WARNING 2025-06-25 01:07:58,430 log 8204 26680 Forbidden: /api/buyers/buyers/register/
+WARNING 2025-06-25 01:07:58,431 basehttp 8204 26680 "GET /api/buyers/buyers/register/ HTTP/1.1" 403 8643
+INFO 2025-06-25 01:11:47,516 basehttp 8204 18896 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 01:11:47,517 basehttp 8204 1540 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 01:11:47,522 basehttp 8204 24092 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 01:11:47,543 basehttp 8204 18896 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 01:11:47,550 basehttp 8204 1540 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 01:11:47,550 basehttp 8204 24092 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 01:11:47,558 basehttp 8204 18896 "GET /api/products/featured/ HTTP/1.1" 200 26
+INFO 2025-06-25 01:11:47,563 basehttp 8204 1540 "GET /api/products/trending/ HTTP/1.1" 200 26
+INFO 2025-06-25 01:11:47,563 basehttp 8204 24092 "GET /api/products/categories/ HTTP/1.1" 200 52
+INFO 2025-06-25 01:11:47,697 basehttp 8204 24092 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 01:11:47,707 basehttp 8204 1540 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+INFO 2025-06-25 01:11:47,716 basehttp 8204 1540 "GET /api/products/?seller__shop_type=shopee_mall&page=1&page_size=8&ordering= HTTP/1.1" 200 52
+WARNING 2025-06-25 01:12:44,538 log 8204 23428 Not Found: /api/buyers/register/
+WARNING 2025-06-25 01:12:44,539 basehttp 8204 23428 "OPTIONS /api/buyers/register/ HTTP/1.1" 404 7277
+INFO 2025-06-25 01:13:01,719 autoreload 8204 9368 D:\BaitapUIT\Mat_Ma_Hoc\new_final_project_clone\quantum-e-commerce\BE\project\buyers\urls.py changed, reloading.
+INFO 2025-06-25 01:13:03,377 autoreload 13484 5128 Watching for file changes with StatReloader

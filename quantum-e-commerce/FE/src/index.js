@@ -4,29 +4,68 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
 
-// Get the root element
-const container = document.getElementById('root');
+// Wait for DOM to be loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Get the root element with error checking
+  const container = document.getElementById('root');
+  
+  if (!container) {
+    console.error('Root element not found! Make sure your HTML has a div with id="root"');
+    return;
+  }
 
-// Create a root
-const root = createRoot(container);
+  // Create a root
+  const root = createRoot(container);
 
-// Initial render
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// Hot Module Replacement for development
-if (module.hot) {
-  module.hot.accept('./App', () => {
-    const NextApp = require('./App').default;
+  // Initial render with error boundary
+  try {
     root.render(
       <React.StrictMode>
-        <NextApp />
+        <App />
       </React.StrictMode>
     );
-  });
+  } catch (error) {
+    console.error('Error rendering React app:', error);
+    
+    // Fallback UI
+    container.innerHTML = `
+      <div style="padding: 20px; text-align: center; color: red;">
+        <h2>Đã xảy ra lỗi khi tải ứng dụng</h2>
+        <p>Vui lòng tải lại trang hoặc liên hệ hỗ trợ.</p>
+        <button onclick="window.location.reload()">Tải lại trang</button>
+      </div>
+    `;
+  }
+
+  // Hot Module Replacement for development
+  if (module.hot) {
+    module.hot.accept('./App', () => {
+      try {
+        const NextApp = require('./App').default;
+        root.render(
+          <React.StrictMode>
+            <NextApp />
+          </React.StrictMode>
+        );
+      } catch (error) {
+        console.error('Hot reload error:', error);
+      }
+    });
+  }
+});
+
+// Alternative: Create root element if it doesn't exist
+function ensureRootElement() {
+  let container = document.getElementById('root');
+  
+  if (!container) {
+    console.warn('Root element not found, creating one...');
+    container = document.createElement('div');
+    container.id = 'root';
+    document.body.appendChild(container);
+  }
+  
+  return container;
 }
 
 // Service Worker Registration (optional)
@@ -46,8 +85,10 @@ if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
 window.addEventListener('unhandledrejection', (event) => {
   console.error('Unhandled promise rejection:', event.reason);
   
+  // Prevent default browser error handling
+  event.preventDefault();
+  
   // You can add global error reporting here
-  // For example, send to error tracking service
   if (process.env.NODE_ENV === 'production') {
     // reportError(event.reason);
   }
@@ -71,5 +112,7 @@ if (process.env.NODE_ENV === 'production') {
     getFCP(console.log);
     getLCP(console.log);
     getTTFB(console.log);
+  }).catch(error => {
+    console.log('Web vitals import error:', error);
   });
 }

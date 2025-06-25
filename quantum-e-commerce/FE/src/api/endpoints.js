@@ -1,42 +1,42 @@
 export const API_ENDPOINTS = {
   // Buyers
-  BUYER_REGISTER: '/auth/buyers/register/',
-  BUYER_LOGIN: '/auth/buyers/login/',
-  BUYER_PROFILE: '/auth/buyers/profile/',
-  BUYER_ADDRESSES: '/auth/buyers/addresses/',
-  TOKEN_REFRESH: '/auth/token/refresh/',
-  
+  BUYER_REGISTER: '/api/buyers/register/',
+  BUYER_LOGIN: '/api/buyers/login/',
+  BUYER_PROFILE: '/api/buyers/profile/',
+  BUYER_ADDRESSES: '/api/buyers/addresses/',
+  TOKEN_REFRESH: '/api/auth/token/refresh/',
+
   // Sellers  
-  SELLERS: '/sellers/',
-  SELLER_DETAIL: (id) => `/sellers/${id}/`,
-  SELLER_REGISTER: '/sellers/register/',
-  SELLER_LOGIN: '/sellers/login/',
-  SELLER_PROFILE: '/sellers/profile/',
-  
+  SELLERS: '/api/sellers/',
+  SELLER_DETAIL: (id) => `/api/sellers/${id}/`,
+  SELLER_REGISTER: '/api/sellers/register/',
+  SELLER_LOGIN: '/api/sellers/login/',
+  SELLER_PROFILE: '/api/sellers/profile/',
+
   // Products
-  PRODUCTS: '/products/',
-  PRODUCT_DETAIL: (id) => `/products/${id}/`,
-  CATEGORIES: '/products/categories/',
-  FEATURED_PRODUCTS: '/products/featured/',
-  TRENDING_PRODUCTS: '/products/trending/',
-  PRODUCT_SEARCH: '/products/search/',
-  
+  PRODUCTS: '/api/products/',
+  PRODUCT_DETAIL: (id) => `/api/products/${id}/`,
+  CATEGORIES: '/api/products/categories/',
+  FEATURED_PRODUCTS: '/api/products/featured/',
+  TRENDING_PRODUCTS: '/api/products/trending/',
+  PRODUCT_SEARCH: '/api/products/search/',
+
   // Orders
-  ORDERS: '/orders/orders/',
-  ORDER_DETAIL: (id) => `/orders/orders/${id}/`,
-  CREATE_ORDER: '/orders/orders/',
-  LOGISTICS_PROVIDERS: '/orders/logistics/',
-  PAYMENT_METHODS: '/orders/payment-methods/',
-  
+  ORDERS: '/api/orders/',
+  ORDER_DETAIL: (id) => `/api/orders/${id}/`,
+  CREATE_ORDER: '/api/orders/',
+  LOGISTICS_PROVIDERS: '/api/orders/logistics/',
+  PAYMENT_METHODS: '/api/orders/payment-methods/',
+
   // Payments
-  PAYMENTS: '/payments/payments/',
-  CREATE_PAYMENT: '/payments/payments/',
-  REFUNDS: '/payments/refunds/',
-  
+  PAYMENTS: '/api/payments/',
+  CREATE_PAYMENT: '/api/payments/',
+  REFUNDS: '/api/payments/refunds/',
+
   // Signatures
-  GENERATE_KEYPAIR: '/signatures/crypto/generate_keypair/',
-  SIGN_MESSAGE: '/signatures/crypto/sign_message/',
-  VERIFY_SIGNATURE: '/signatures/crypto/verify_signature/',
-  SIGNATURE_LOGS: '/signatures/logs/',
-  CERTIFICATE_AUTHORITIES: '/signatures/ca/',
+  GENERATE_KEYPAIR: '/api/signatures/crypto/generate_keypair/',
+  SIGN_MESSAGE: '/api/signatures/crypto/sign_message/',
+  VERIFY_SIGNATURE: '/api/signatures/crypto/verify_signature/',
+  SIGNATURE_LOGS: '/api/signatures/logs/',
+  CERTIFICATE_AUTHORITIES: '/api/signatures/ca/',
 };
