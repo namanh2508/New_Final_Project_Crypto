@@ -1,6 +1,6 @@
 import uuid
 from django.db import models
-
+from django.contrib.auth.hashers import check_password as django_check_password
 class Buyer(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     username = models.CharField(max_length=150, unique=True)
@@ -24,6 +24,19 @@ class Buyer(models.Model):
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     
+    def check_password(self, raw_password):
+        """
+        Kiểm tra mật khẩu thô so với mật khẩu đã được băm trong database.
+        """
+        return django_check_password(raw_password, self.password)
+    
+    @property
+    def is_authenticated(self):
+        return True
+
+    @property
+    def is_anonymous(self):
+        return False
     class Meta:
         db_table = 'buyers'
         

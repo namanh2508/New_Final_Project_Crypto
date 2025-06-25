@@ -1,3 +1,4 @@
+// client.js
 import axios from 'axios';
 
 // Base URL của Django API
@@ -41,7 +42,8 @@ apiClient.interceptors.response.use(
       try {
         const refreshToken = localStorage.getItem('refresh_token');
         if (refreshToken) {
-          const response = await axios.post(`${API_BASE_URL}/auth/token/refresh/`, {
+          // Sử dụng endpoint refresh token của Django SimpleJWT
+          const response = await axios.post(`${API_BASE_URL}/api/token/refresh/`, {
             refresh: refreshToken
           });
           
@@ -56,6 +58,7 @@ apiClient.interceptors.response.use(
         // Refresh token cũng hết hạn, đăng xuất user
         localStorage.removeItem('access_token');
         localStorage.removeItem('refresh_token');
+        localStorage.removeItem('user'); // Xóa thông tin user
         window.location.href = '/login';
         return Promise.reject(refreshError);
       }
@@ -67,65 +70,26 @@ apiClient.interceptors.response.use(
 
 export default apiClient;
 
-
-
-
-
-
-
-
-
-
-
-
-
-// src/utils/constants.js
-export const ORDER_STATUS = {
-  PENDING: 'pending',
-  CONFIRMED: 'confirmed',
-  SHIPPING: 'shipping', 
-  DELIVERED: 'delivered',
-  CANCELLED: 'cancelled'
+// Export thêm các helper functions
+export const saveTokens = (tokens) => {
+  if (tokens.access) {
+    localStorage.setItem('access_token', tokens.access);
+  }
+  if (tokens.refresh) {
+    localStorage.setItem('refresh_token', tokens.refresh);
+  }
 };
 
-export const ORDER_STATUS_DISPLAY = {
-  [ORDER_STATUS.PENDING]: 'Chờ xác nhận',
-  [ORDER_STATUS.CONFIRMED]: 'Đã xác nhận',
-  [ORDER_STATUS.SHIPPING]: 'Đang giao hàng',
-  [ORDER_STATUS.DELIVERED]: 'Đã giao hàng',
-  [ORDER_STATUS.CANCELLED]: 'Đã hủy'
+export const clearTokens = () => {
+  localStorage.removeItem('access_token');
+  localStorage.removeItem('refresh_token');
+  localStorage.removeItem('user');
 };
 
-export const PAYMENT_STATUS = {
-  PENDING: 'pending',
-  PAID: 'paid',
-  FAILED: 'failed'
+export const getAccessToken = () => {
+  return localStorage.getItem('access_token');
 };
 
-export const USER_TYPES = {
-  BUYER: 'buyer',
-  SELLER: 'seller'
-};
-
-// src/utils/helpers.js
-export const formatPrice = (price) => {
-  return new Intl.NumberFormat('vi-VN', {
-    style: 'currency',
-    currency: 'VND'
-  }).format(price);
-};
-
-export const formatDate = (date) => {
-  return new Intl.DateTimeFormat('vi-VN', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit'
-  }).format(new Date(date));
-};
-
-export const truncateText = (text, maxLength = 100) => {
-  if (text.length <= maxLength) return text;
-  return text.substring(0, maxLength) + '...';
+export const isAuthenticated = () => {
+  return !!getAccessToken();
 };

@@ -114,4 +114,5 @@ class SignatureService {
   }
 }
 
-export default new SignatureService();
+const signatureService = new SignatureService();
+export default signatureService;

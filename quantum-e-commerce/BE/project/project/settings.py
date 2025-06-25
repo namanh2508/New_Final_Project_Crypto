@@ -159,11 +159,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Django REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'buyers.authentication.BuyerJWTAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny',  # Default permission for public access
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 20
@@ -192,7 +194,7 @@ if not DEBUG:
 
 # JWT Authentication
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(hours=1),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
@@ -286,4 +288,12 @@ LOGGING = {
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.Argon2PasswordHasher',  # nâng cấp hàm băm mật khẩu +1
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+]
+
+AUTHENTICATION_BACKENDS = [
+    
+    'buyers.authentication.CustomAuthBackend',  
+    
+    
+    'django.contrib.auth.backends.ModelBackend',
 ]

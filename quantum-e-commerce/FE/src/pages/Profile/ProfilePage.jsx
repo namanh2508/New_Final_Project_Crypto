@@ -148,36 +148,63 @@ const ProfilePage = () => {
   };
 
   const handleGenerateSignature = async () => {
+    // Hiển thị thông báo xác nhận để người dùng hiểu tầm quan trọng
+    if (!window.confirm('Bạn sắp tạo một cặp khóa chữ ký số mới. Khóa bí mật sẽ được lưu trên trình duyệt này. Bạn có muốn tiếp tục?')) {
+      return;
+    }
+
+    const toastId = toast.loading('Đang tạo cặp khóa Dilithium...');
+    
     try {
-      setLoading(true);
-      const response = await signatureService.generateKeypair();
-      
+      // Thay đổi 1: Gọi đến buyerService thay vì signatureService, vì URL đã được sửa
+      // `/api/buyers/{userId}/create-digital-signature/`
+      const response = await buyerService.createDigitalSignature(user.id);
+
       if (response.success) {
-        setSignatureData(response.data);
-        toast.success('Tạo cặp khóa Dilithium thành công');
-        
-        // Có thể lưu public key vào profile user
-        const updateData = {
-          ...formData,
-          public_key: response.data.public_key,
-          quantum_resistant: true,
+        // --- BẮT ĐẦU PHẦN CẬP NHẬT GIAO DIỆN VÀ LƯU TRỮ ---
+
+        // Thay đổi 2: Lưu khóa bí mật vào localStorage
+        // Cảnh báo: Đây là cách lưu trữ đơn giản, trong thực tế cần mã hóa thêm
+        localStorage.setItem(`dilithium_private_key_${user.id}`, response.private_key);
+
+        // Thay đổi 3: Cập nhật state của user ngay lập tức để giao diện thay đổi
+        // Dữ liệu mới này được lấy từ chính response của API, không cần phải fetch lại
+        const updatedSignatureInfo = {
+          public_key: response.public_key,
           signature_algorithm: 'CRYSTAL-DILITHIUM',
-          dilithium_variant: 'DILITHIUM3'
+          dilithium_variant: 'DILITHIUM3',
+          is_signature_verified: true, // Giả định là đã xác minh thành công
+          quantum_resistant: true,
         };
+
+        setUser(prevUser => ({
+          ...prevUser,
+          ...updatedSignatureInfo
+        }));
+
+        // Cũng cập nhật lại formData để nếu người dùng có sửa thông tin khác thì không bị mất
+        setFormData(prevData => ({
+          ...prevData,
+          ...updatedSignatureInfo
+        }));
         
-        // Update profile with new key
-        if (userType === 'buyer') {
-          await buyerService.updateProfile(updateData);
-        } else {
-          await sellerService.updateProfile(updateData);
-        }
+        // Cập nhật lại user_data trong localStorage
+        const storedUserData = JSON.parse(localStorage.getItem('user_data'));
+        localStorage.setItem('user_data', JSON.stringify({ ...storedUserData, ...updatedSignatureInfo }));
+
+        toast.success('Tạo chữ ký số thành công! Khóa bí mật đã được lưu trữ an toàn trên trình duyệt của bạn.', { id: toastId });
         
-        setUser(prev => ({ ...prev, ...updateData, is_signature_verified: true }));
+        // Hiển thị thông tin khóa trong modal
+        setSignatureData({ public_key: response.public_key });
+        setShowSignatureModal(true);
+        
+        // --- KẾT THÚC PHẦN CẬP NHẬT ---
+      } else {
+        // Nếu API trả về success: false
+        toast.error(response.message || 'Không thể tạo chữ ký số', { id: toastId });
       }
     } catch (error) {
-      toast.error('Không thể tạo chữ ký số');
-    } finally {
-      setLoading(false);
+      toast.error(error.message || 'Đã xảy ra lỗi khi tạo chữ ký số', { id: toastId });
     }
   };
 

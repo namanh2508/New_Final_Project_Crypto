@@ -99,6 +99,17 @@ class BuyerService {
     }
     return { message: 'Lỗi kết nối mạng', errors: {}, status: 0 };
   }
+  async createDigitalSignature(userId) {
+    try {
+      // Gọi API để tạo chữ ký số cho người dùng
+      const response = await apiClient.post(`/api/buyers/${userId}/create-digital-signature/`);
+      return response.data;
+    } catch (error) {
+      // Xử lý lỗi
+      throw this.handleError(error); // Nên dùng handleError để thống nhất
+    }
+  }
 }
 
-export default new BuyerService();
+const buyerService = new BuyerService();
+export default buyerService;

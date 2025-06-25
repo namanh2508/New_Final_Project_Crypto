@@ -1,126 +1,49 @@
-# BE/project/signatures/dilithium_utils.py
+# signatures/dilithium_utils.py
 
-import hashlib
-import json
+import oqs
 import base64
-from typing import Dict, Tuple, Optional
-import numpy as np
-from Crypto.Random import get_random_bytes
 
 class DilithiumSignature:
-    """
-    Simplified Dilithium signature implementation for demonstration
-    Note: This is a simplified version. For production, use a proper implementation.
-    """
-    
-    # Dilithium parameters (simplified)
-    n = 256
-    q = 8380417
-    k = 4
-    l = 4
-    eta = 2
-    tau = 39
-    beta = 78
-    gamma1 = 2**17
-    gamma2 = (q - 1) // 88
-    omega = 80
-    
+    # Sử dụng biến thể Dilithium3 mặc định
+    VARIANT_CLASS = oqs.Signature  # Sử dụng class chung
+    VARIANT_NAME = "Dilithium3"     # Tên thuật toán dưới dạng string
+
     @staticmethod
-    def generate_keypair() -> Tuple[str, str]:
-        """Generate a new keypair"""
-        # Simplified key generation
-        seed = get_random_bytes(32)
-        
-        # Generate matrix A (simplified)
-        A = np.random.randint(0, DilithiumSignature.q, 
-                              (DilithiumSignature.k, DilithiumSignature.l))
-        
-        # Generate secret vectors (simplified)
-        s1 = np.random.randint(-DilithiumSignature.eta, 
-                               DilithiumSignature.eta + 1, 
-                               DilithiumSignature.l)
-        s2 = np.random.randint(-DilithiumSignature.eta, 
-                               DilithiumSignature.eta + 1, 
-                               DilithiumSignature.k)
-        
-        # Compute public key (simplified)
-        t = (A @ s1 + s2) % DilithiumSignature.q
-        
-        # Serialize keys
-        private_key = {
-            'seed': base64.b64encode(seed).decode(),
-            's1': s1.tolist(),
-            's2': s2.tolist(),
-            'A': A.tolist()
-        }
-        
-        public_key = {
-            't': t.tolist(),
-            'A': A.tolist()
-        }
-        
-        return (
-            base64.b64encode(json.dumps(private_key).encode()).decode(),
-            base64.b64encode(json.dumps(public_key).encode()).decode()
-        )
-    
+    def generate_keypair():
+        """
+        Tạo cặp khóa Dilithium bằng thư viện OQS, sử dụng API đúng.
+        """
+        # Khởi tạo đối tượng signature với tên thuật toán
+        with DilithiumSignature.VARIANT_CLASS(DilithiumSignature.VARIANT_NAME) as signer:
+            public_key = signer.generate_keypair()
+            secret_key = signer.export_secret_key()
+            
+            public_key_b64 = base64.b64encode(public_key).decode('utf-8')
+            secret_key_b64 = base64.b64encode(secret_key).decode('utf-8')
+            
+            return secret_key_b64, public_key_b64
+
     @staticmethod
-    def sign(message: str, private_key: str) -> str:
-        """Sign a message with private key"""
-        # Decode private key
+    def sign(message: bytes, private_key_b64: str) -> str:
+        """
+        Ký một thông điệp (bytes) bằng khóa bí mật.
+        """
+        secret_key = base64.b64decode(private_key_b64)
+        with DilithiumSignature.VARIANT_CLASS(DilithiumSignature.VARIANT_NAME, secret_key) as signer:
+            signature = signer.sign(message)
+            return base64.b64encode(signature).decode('utf-8')
+
+    @staticmethod
+    def verify(message: bytes, signature_b64: str, public_key_b64: str) -> bool:
+        """
+        Xác minh chữ ký.
+        """
         try:
-            private_key_data = json.loads(
-                base64.b64decode(private_key).decode()
-            )
-        except:
-            raise ValueError("Invalid private key format")
-        
-        # Hash the message
-        message_hash = hashlib.sha3_256(message.encode()).digest()
-        
-        # Generate signature (simplified)
-        nonce = get_random_bytes(32)
-        
-        # Simplified signature generation
-        signature_data = {
-            'message_hash': base64.b64encode(message_hash).decode(),
-            'nonce': base64.b64encode(nonce).decode(),
-            'z': np.random.randint(0, 100, DilithiumSignature.l).tolist(),
-            'c': base64.b64encode(get_random_bytes(32)).decode()
-        }
-        
-        return base64.b64encode(json.dumps(signature_data).encode()).decode()
-    
-    @staticmethod
-    def verify(message: str, signature: str, public_key: str) -> bool:
-        """Verify a signature with public key"""
-        try:
-            # Decode signature and public key
-            signature_data = json.loads(
-                base64.b64decode(signature).decode()
-            )
-            public_key_data = json.loads(
-                base64.b64decode(public_key).decode()
-            )
+            public_key = base64.b64decode(public_key_b64)
+            signature = base64.b64decode(signature_b64)
             
-            # Hash the message
-            message_hash = hashlib.sha3_256(message.encode()).digest()
-            stored_hash = base64.b64decode(signature_data['message_hash'])
-            
-            # Verify hash matches
-            if message_hash != stored_hash:
-                return False
-            
-            # Simplified verification (always returns True for demo)
-            # In real implementation, this would perform actual verification
-            return True
-            
-        except:
+            with DilithiumSignature.VARIANT_CLASS(DilithiumSignature.VARIANT_NAME) as verifier:
+                is_valid = verifier.verify(message, signature, public_key)
+                return is_valid
+        except Exception:
             return False
-    
-    @staticmethod
-    def hash_transaction(transaction_data: Dict) -> str:
-        """Hash transaction data for signing"""
-        # Sort keys for consistent hashing
-        sorted_data = json.dumps(transaction_data, sort_keys=True)
-        return hashlib.sha3_256(sorted_data.encode()).hexdigest()

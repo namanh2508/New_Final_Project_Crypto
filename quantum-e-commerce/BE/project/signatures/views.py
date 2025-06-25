@@ -12,7 +12,7 @@ import json
 from .models import CertificateAuthority
 from .serializers import CertificateAuthoritySerializer  # cần có file serializers.py đúng cách
 from rest_framework import viewsets
-
+from buyers.models import Buyer 
 class SignatureLogViewSet(viewsets.ModelViewSet):
     queryset = SignatureLog.objects.all()
     serializer_class = SignatureLogSerializer
@@ -27,31 +27,7 @@ class SignatureLogViewSet(viewsets.ModelViewSet):
             return SignatureLog.objects.filter(buyer=user.buyer)
         return SignatureLog.objects.none()
 
-    @action(detail=False, methods=['post'])
-    def generate_keypair(self, request):
-        """Generate a new Dilithium keypair for the user"""
-        try:
-            private_key, public_key = DilithiumSignature.generate_keypair()
-            
-            # Store public key in user profile
-            user = request.user
-            if hasattr(user, 'seller'):
-                user.seller.public_key = public_key
-                user.seller.save()
-            elif hasattr(user, 'buyer'):
-                user.buyer.public_key = public_key
-                user.buyer.save()
-            
-            return Response({
-                'public_key': public_key,
-                'private_key': private_key,
-                'message': 'Keypair generated successfully. Please save your private key securely!'
-            })
-        except Exception as e:
-            return Response(
-                {'error': str(e)}, 
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
+    
 
     @action(detail=False, methods=['post'])
     def sign_transaction(self, request):
@@ -184,6 +160,52 @@ class CertificateAuthorityViewSet(viewsets.ModelViewSet):
 class DigitalSignatureViewSet(viewsets.ViewSet):
     permission_classes = [IsAuthenticated]
 
+    @action(detail=False, methods=['post'])
+    def generate_keypair(self, request):
+        """
+        Tạo một cặp khóa Dilithium mới cho người dùng.
+        """
+        try:
+            # 1. Sử dụng thư viện thật để tạo khóa
+            # (Giả sử dilithium_utils đã được cập nhật để dùng 'oqs')
+            private_key_b64, public_key_b64 = DilithiumSignature.generate_keypair()
+
+            # 2. Lưu khóa công khai vào đúng đối tượng user
+            user = request.user
+
+            # Kiểm tra xem user có phải là Buyer hay không
+            if isinstance(user, Buyer):
+                user.public_key = public_key_b64
+                user.save()
+            # Có thể thêm logic cho Seller ở đây trong tương lai
+            # elif isinstance(user, Seller):
+            #     user.public_key = public_key_b64
+            #     user.save()
+            else:
+                # Nếu không xác định được loại user, trả về lỗi
+                return Response(
+                    {'error': 'Không thể xác định loại người dùng để lưu khóa công khai.'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            # 3. Trả về cả hai khóa cho người dùng
+            # CẢNH BÁO BẢO MẬT: Trong môi trường production, KHÔNG BAO GIỜ
+            # trả về khóa bí mật như thế này. Client nên tự tạo và giữ nó.
+            return Response({
+                'public_key': public_key_b64,
+                'private_key': private_key_b64,
+                'message': 'Tạo cặp khóa thành công. Hãy lưu khóa bí mật của bạn ở nơi an toàn!'
+            })
+        except Exception as e:
+            # In ra lỗi chi tiết để debug
+            print(f"!!! LỖI NGHIÊM TRỌNG TRONG generate_keypair: {e}")
+            import traceback
+            traceback.print_exc()
+            return Response(
+                {'error': str(e)}, 
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+            
     @action(detail=False, methods=['post'])
     def verify_signature(self, request):
         """API đơn giản để verify chữ ký"""
